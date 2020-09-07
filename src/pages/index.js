@@ -5,12 +5,12 @@ import './index.css'
 
 import Header from '../components/header'
 import Hero from '../components/hero'
-import ProjectCard from '../components/projectCard'
+import Projects from '../components/projects'
 
 
 
 const ContainerDiv = styled.div`
-    
+
 `
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
     <ContainerDiv>
       <Header />
       <Hero />
-      <ProjectCard />
+      <Projects />
     </ContainerDiv>
   )
 }

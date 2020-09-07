@@ -1,16 +1,21 @@
 import React from "react"
 import styled from 'styled-components'
 
-const HeaderDiv = styled.div`
-    height: 70px;
-    background-color: white;
+
+const ProjectDiv = styled.div`
+    height: auto;
+    width: 100%;
+
     display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
 ` 
 
 const Projects = () =>(
-    <HeaderDiv>
-        
-    </HeaderDiv>
+    <ProjectDiv>
+    </ProjectDiv>
 )
 
 export default Projects

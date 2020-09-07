@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import BackgroundImage from '../media/site-background.jpg'
 
 const CardDiv = styled.div`
+    margin: 0;
+    padding: 0;
     height: 250px;
     width: 250px;
     background-color: white;
@@ -11,6 +13,7 @@ const CardDiv = styled.div`
     background-image: url(${BackgroundImage});
     background-size: cover;
     background-position:center;
+    
 `
 
 const ContentDiv = styled.div`
@@ -71,20 +74,20 @@ const CardLinks = styled.a`
 `
 
 
-const ProjectCard = () =>(
-   <CardDiv>
-       <ContentDiv>
-           <CardTop>
-           <CardTitle>Title</CardTitle>
-           <CardBio>A simple Description</CardBio>
-           </CardTop>
+const ProjectCard = () => (
+    <CardDiv>
+        <ContentDiv>
+            <CardTop>
+                <CardTitle>Title</CardTitle>
+                <CardBio>A simple Description</CardBio>
+            </CardTop>
 
-           <CardBottom>
+            <CardBottom>
                 <CardLinks>Github</CardLinks>
                 <CardLinks>Live</CardLinks>
-           </CardBottom>
-       </ContentDiv>
-   </CardDiv>
+            </CardBottom>
+        </ContentDiv>
+    </CardDiv>
 )
 
 export default ProjectCard
