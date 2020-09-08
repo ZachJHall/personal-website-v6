@@ -4,13 +4,17 @@ import styled from 'styled-components'
 import BackgroundImage from '../media/site-background.jpg'
 
 const CardDiv = styled.div`
-    margin: 0;
+    margin: 20px 0 20px 0;
     padding: 0;
-    height: 250px;
-    width: 250px;
+
+    height: 40vh;
+    width: 40vh;
+
+    min-height: 250px;
+    max-height: 450px;
+
     background-color: white;
 
-    background-image: url(${BackgroundImage});
     background-size: cover;
     background-position:center;
     
@@ -41,7 +45,7 @@ const CardTop = styled.div`
 const CardTitle = styled.h4`
         margin: 0;
         color:white;
-        font-size: 30px;
+        font-size: 25px;
         display: none;
 
         
@@ -64,7 +68,7 @@ const CardBottom = styled.div`
        
 `
 
-const CardLinks = styled.a`
+const CardLink = styled.a`
         color: white;
         font-size: 20px;
         display: none;
@@ -74,17 +78,17 @@ const CardLinks = styled.a`
 `
 
 
-const ProjectCard = () => (
-    <CardDiv>
+const ProjectCard = (props) => (
+    <CardDiv style = {{ backgroundImage: `url(${props.backgroundImg})`}}>
         <ContentDiv>
             <CardTop>
-                <CardTitle>Title</CardTitle>
-                <CardBio>A simple Description</CardBio>
+                <CardTitle>{props.title}</CardTitle>
+                <CardBio>{props.bio}</CardBio>
             </CardTop>
 
             <CardBottom>
-                <CardLinks>Github</CardLinks>
-                <CardLinks>Live</CardLinks>
+                <CardLink href = {props.gitU}>Github</CardLink>
+                <CardLink href = {props.liveU}>Live</CardLink>
             </CardBottom>
         </ContentDiv>
     </CardDiv>
