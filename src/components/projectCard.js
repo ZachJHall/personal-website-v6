@@ -40,6 +40,7 @@ const CardTop = styled.div`
 
         justify-content: center;
         align-items: center;
+        text-align: center;
 `
 
 const CardTitle = styled.h4`
