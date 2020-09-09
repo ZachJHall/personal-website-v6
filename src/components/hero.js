@@ -2,6 +2,7 @@ import React from "react"
 import styled from 'styled-components'
 
 import BackgroundImage from '../media/site-background.jpg'
+import Resume from '../media/Zach-Hall-Website-Resume.pdf'
 
 const HeroDiv = styled.div`
     height: 50vh;
@@ -85,6 +86,8 @@ const Hero = () =>(
                     <ContactLink href="https://linkedin.com/in/zachhall-cs" >Linkedin</ContactLink>
                     <ContactLink href="https://github.com/ZachJHall">Github</ContactLink>
                     <ContactLink href="mailto:zachjohnhall+personalwebsite@gmail.com">Email</ContactLink>
+                    <ContactLink href={Resume}>Resume</ContactLink>
+
                 </ContactDiv>
 
             </CenterDiv>
