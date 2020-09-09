@@ -82,9 +82,9 @@ const Hero = () =>(
                 </UpperDiv>
 
                 <ContactDiv>
-                    <ContactLink>Linkedin</ContactLink>
-                    <ContactLink>Github</ContactLink>
-                    <ContactLink>Email</ContactLink>
+                    <ContactLink href="https://linkedin.com/in/zachhall-cs" >Linkedin</ContactLink>
+                    <ContactLink href="https://github.com/ZachJHall">Github</ContactLink>
+                    <ContactLink href="mailto:zachjohnhall+personalwebsite@gmail.com">Email</ContactLink>
                 </ContactDiv>
 
             </CenterDiv>
