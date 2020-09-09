@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import ProjectCard from './projectCard'
 
 import img1 from '../media/site-background.jpg'
+import ChihuahuaRescue from '../media/chihuahuaRescueMidwestImage.png'
+import Paint from '../media/digital-paint-board.png'
+
 
 const ProjectDiv = styled.div`
     height: auto;
@@ -50,20 +53,23 @@ const Projects = () =>(
             <IntroText>Projects</IntroText>
         </IntroDiv>
         <ProjectContainer>
+
             <ProjectCard 
-            backgroundImg = {img1}
+            backgroundImg = {ChihuahuaRescue}
             title = "Chihuahua Rescue Midwest" 
             bio = "Built for a St. Louis Charity"
             gitU = "https://github.com/ZachJHall/Rescue-Midwest"
             liveU = "https://www.chihuahuarescuemidwest.org/"
             />
+            
             <ProjectCard 
-            backgroundImg = {img1}
+            backgroundImg = {Paint}
             title="Digital Paint Board" 
             bio="I wanted to mess with the canvas tag"
             gitU="https://github.com/ZachJHall/digital-paint-board"
             liveU="https://zachjhall.github.io/digital-paint-board/"
             />
+
         </ProjectContainer>
     </ProjectDiv>
 )

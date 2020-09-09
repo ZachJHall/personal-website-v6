@@ -33,7 +33,6 @@ const CenterDiv = styled.div`
     display: flex;
     flex-direction: column;
 
-    background-color: rgba(143, 0,0, 0.6);
 
     
 `
@@ -53,12 +52,41 @@ const CenterTextSub = styled.h3`
         font-size: 20px;
 `
 
+const UpperDiv = styled.div`
+    height:80%;
+    display:flex;
+    flex-direction: column;
+`
+const ContactDiv = styled.div`
+    height: 20%;
+
+    display: flex;
+
+    justify-content: space-around;
+    
+`
+
+const ContactLink = styled.a`
+    font-size: 20px;
+    color:#FFFFFF;
+    margin:0;
+`
+
 const Hero = () =>(
     <HeroDiv>
         <ContentDiv>
             <CenterDiv>
-                <CenterText>Hey, I'm Zach</CenterText>
-                <CenterTextSub>Software Dev, St. Louis</CenterTextSub>
+                <UpperDiv>
+                    <CenterText>Hey, I'm Zach</CenterText>
+                    <CenterTextSub>Software Dev, St. Louis</CenterTextSub>
+                </UpperDiv>
+
+                <ContactDiv>
+                    <ContactLink>Linkedin</ContactLink>
+                    <ContactLink>Github</ContactLink>
+                    <ContactLink>Email</ContactLink>
+                </ContactDiv>
+
             </CenterDiv>
         </ContentDiv>
     </HeroDiv>

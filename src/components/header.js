@@ -11,7 +11,7 @@ const LeftDiv = styled.div`
     height:100%;
 `
 const MiddleDiv = styled.div`
-    width: 34%;
+    width: 100%;
     height:100%;
     display:flex;
     justify-content:center;
@@ -30,11 +30,11 @@ const RightDiv = styled(LeftDiv)`
 `
 const Header = () =>(
     <HeaderDiv>
-        <LeftDiv />
+        
         <MiddleDiv>
             <HeaderText>Zach Hall</HeaderText>
         </MiddleDiv>
-        <RightDiv />
+     
     </HeaderDiv>
 )
 
