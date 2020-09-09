@@ -1,7 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
 
-import BackgroundImage from '../media/site-background.jpg'
 
 const CardDiv = styled.div`
     margin: 20px 0 20px 0;
@@ -18,17 +17,18 @@ const CardDiv = styled.div`
     background-size: cover;
     background-position:center;
     
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
 `
 
 const ContentDiv = styled.div`
     height: 100%;
     background-color: rgba(0,143, 198, 0);
 
-
     &:hover {
         background-color: rgba(0,143, 198, 0.7);
 
     }
+
 
 `
 
