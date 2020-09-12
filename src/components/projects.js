@@ -6,7 +6,7 @@ import ProjectCard from './projectCard'
 import img1 from '../media/site-background.jpg'
 import ChihuahuaRescue from '../media/chihuahuaRescueMidwestImage.png'
 import Paint from '../media/digital-paint-board.png'
-
+import Fitness from '../media/usafitness.png'
 
 const ProjectDiv = styled.div`
     height: auto;
@@ -61,6 +61,14 @@ const Projects = () =>(
             gitU = "https://github.com/ZachJHall/Rescue-Midwest"
             liveU = "https://www.chihuahuarescuemidwest.org/"
             />
+
+            <ProjectCard 
+            backgroundImg = {Fitness}
+            title="Gym Website" 
+            bio="A general gym website design"
+            gitU="https://github.com/ZachJHall/powerbodyusa-website"
+            liveU="https://test.zachhall.me/"
+            />
             
             <ProjectCard 
             backgroundImg = {Paint}
@@ -69,6 +77,8 @@ const Projects = () =>(
             gitU="https://github.com/ZachJHall/digital-paint-board"
             liveU="https://zachjhall.github.io/digital-paint-board/"
             />
+
+            
 
         </ProjectContainer>
     </ProjectDiv>
