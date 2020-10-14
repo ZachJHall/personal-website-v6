@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'styled-components'
 
 import BackgroundImage from '../media/site-background.jpg'
-import Resume from '../media/Zach-Hall-Website-Resume.pdf'
+import Resume from '../media/Zach-Hall-Resume-O.pdf'
 
 const HeroDiv = styled.div`
     height: 50vh;
