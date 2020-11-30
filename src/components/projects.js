@@ -7,6 +7,7 @@ import img1 from '../media/site-background.jpg'
 import ChihuahuaRescue from '../media/chihuahuaRescueMidwestImage.png'
 import Paint from '../media/digital-paint-board.png'
 import Fitness from '../media/usafitness.png'
+import SpinAFriend from '../media/spinAFriend.png'
 
 const ProjectDiv = styled.div`
     height: auto;
