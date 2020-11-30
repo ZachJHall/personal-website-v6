@@ -79,6 +79,14 @@ const Projects = () =>(
             liveU="https://zachjhall.github.io/digital-paint-board/"
             />
 
+            <ProjectCard 
+            backgroundImg = {SpinAFriend}
+            title="Spin A Friend" 
+            bio="Building useless stuff can be fun"
+            gitU="https://github.com/ZachJHall/spin-a-friend"
+            liveU="https://spinafriend.com/"
+            />
+
             
 
         </ProjectContainer>
