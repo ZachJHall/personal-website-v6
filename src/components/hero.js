@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import BackgroundImage from '../media/site-background.jpg'
 import Resume from '../media/Zach-Hall-Resume-O.pdf'
 
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+
 const HeroDiv = styled.div`
     height: 50vh;
     background-color: blue;
@@ -78,20 +81,48 @@ const ContactLink = styled.a`
 const HeroImageDiv = styled.div`
     height: 100%;
     width: 100%;
-`
-const HeroImage = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+
+    > * {
+        height: 100%;
+    }
 
 `
+// const HeroImage = styled.img`
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     object-position: center;
+
+// `
+const BannerImage = () => {
+    const data = useStaticQuery(graphql`
+      query MyQuery {
+        file(relativePath: {eq: "site-background.jpg"}) {
+          childImageSharp {
+            fluid {
+              aspectRatio
+              base64
+              sizes
+              src
+              srcSet
+            }
+          }
+        }
+      }
+    `)
+
+    return (
+      <HeroImageDiv>
+        <Img fluid = {data.file.childImageSharp.fluid} alt='barbell with weight at Powerbody USA'/>
+      </HeroImageDiv>
+    )
+  }
+
+
 const Hero = () =>(
     <HeroDiv>
 
-        <HeroImageDiv>
-            <HeroImage src={BackgroundImage}  />
-        </HeroImageDiv>
+        <BannerImage />
 
         <ContentDiv>
           
