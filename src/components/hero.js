@@ -11,19 +11,23 @@ const HeroDiv = styled.div`
     min-height: 380px;
     max-height: 450px;
 
-    background-image: url(${BackgroundImage});
-    background-size: cover;
-    background-position:center;
+    position: relative;
    
 ` 
 
 const ContentDiv = styled.div`
     height: 100%;
+    width: 100%;
     background-color: rgba(0,143, 198, 0.7);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
 
 `
 
@@ -34,8 +38,6 @@ const CenterDiv = styled.div`
     display: flex;
     flex-direction: column;
 
-
-    
 `
 
 const CenterText = styled.h2`
@@ -73,10 +75,28 @@ const ContactLink = styled.a`
     margin:0;
 `
 
+const HeroImageDiv = styled.div`
+    height: 100%;
+    width: 100%;
+`
+const HeroImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+`
 const Hero = () =>(
     <HeroDiv>
+
+        <HeroImageDiv>
+            <HeroImage src={BackgroundImage}  />
+        </HeroImageDiv>
+
         <ContentDiv>
+          
             <CenterDiv>
+
                 <UpperDiv>
                     <CenterText>Hey, I'm Zach</CenterText>
                     <CenterTextSub>Software Dev, St. Louis</CenterTextSub>
@@ -87,11 +107,12 @@ const Hero = () =>(
                     <ContactLink href="https://github.com/ZachJHall">Github</ContactLink>
                     <ContactLink href="mailto:zachjohnhall+personalwebsite@gmail.com">Email</ContactLink>
                     <ContactLink href={Resume}>Resume</ContactLink>
-
                 </ContactDiv>
 
             </CenterDiv>
+
         </ContentDiv>
+
     </HeroDiv>
 )
 
