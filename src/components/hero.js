@@ -14,16 +14,24 @@ const HeroDiv = styled.div`
     // background-image: url(${BackgroundImage});
     // background-size: cover;
     // background-position:center;
+
+    position: relative;
    
 ` 
 
 const ContentDiv = styled.div`
     height: 100%;
+    width: 100%;
     background-color: rgba(0,143, 198, 0.7);
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
 
 `
 
@@ -91,11 +99,11 @@ const Hero = () =>(
         <HeroImageDiv>
             <HeroImage src={BackgroundImage}  />
         </HeroImageDiv>
-        
+
         <ContentDiv>
             
             
-            {/* <CenterDiv>
+            <CenterDiv>
                 <UpperDiv>
                     <CenterText>Hey, I'm Zach</CenterText>
                     <CenterTextSub>Software Dev, St. Louis</CenterTextSub>
@@ -109,7 +117,7 @@ const Hero = () =>(
 
                 </ContactDiv>
 
-            </CenterDiv> */}
+            </CenterDiv>
 
         </ContentDiv>
     </HeroDiv>
