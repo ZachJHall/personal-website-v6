@@ -11,10 +11,6 @@ const HeroDiv = styled.div`
     min-height: 380px;
     max-height: 450px;
 
-    // background-image: url(${BackgroundImage});
-    // background-size: cover;
-    // background-position:center;
-
     position: relative;
    
 ` 
@@ -42,8 +38,6 @@ const CenterDiv = styled.div`
     display: flex;
     flex-direction: column;
 
-
-    
 `
 
 const CenterText = styled.h2`
@@ -96,14 +90,15 @@ const HeroImage = styled.img`
 `
 const Hero = () =>(
     <HeroDiv>
+
         <HeroImageDiv>
             <HeroImage src={BackgroundImage}  />
         </HeroImageDiv>
 
         <ContentDiv>
-            
-            
+          
             <CenterDiv>
+
                 <UpperDiv>
                     <CenterText>Hey, I'm Zach</CenterText>
                     <CenterTextSub>Software Dev, St. Louis</CenterTextSub>
@@ -114,12 +109,12 @@ const Hero = () =>(
                     <ContactLink href="https://github.com/ZachJHall">Github</ContactLink>
                     <ContactLink href="mailto:zachjohnhall+personalwebsite@gmail.com">Email</ContactLink>
                     <ContactLink href={Resume}>Resume</ContactLink>
-
                 </ContactDiv>
 
             </CenterDiv>
 
         </ContentDiv>
+
     </HeroDiv>
 )
 
