@@ -85,8 +85,6 @@ const HeroImage = styled.img`
     object-fit: cover;
     object-position: center;
 
-    // background-size: cover;
-    // background-position:center;
 `
 const Hero = () =>(
     <HeroDiv>
