@@ -11,9 +11,9 @@ const HeroDiv = styled.div`
     min-height: 380px;
     max-height: 450px;
 
-    background-image: url(${BackgroundImage});
-    background-size: cover;
-    background-position:center;
+    // background-image: url(${BackgroundImage});
+    // background-size: cover;
+    // background-position:center;
    
 ` 
 
@@ -73,10 +73,29 @@ const ContactLink = styled.a`
     margin:0;
 `
 
+const HeroImageDiv = styled.div`
+    height: 100%;
+    width: 100%;
+`
+const HeroImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    // background-size: cover;
+    // background-position:center;
+`
 const Hero = () =>(
     <HeroDiv>
+        <HeroImageDiv>
+            <HeroImage src={BackgroundImage}  />
+        </HeroImageDiv>
+        
         <ContentDiv>
-            <CenterDiv>
+            
+            
+            {/* <CenterDiv>
                 <UpperDiv>
                     <CenterText>Hey, I'm Zach</CenterText>
                     <CenterTextSub>Software Dev, St. Louis</CenterTextSub>
@@ -90,7 +109,8 @@ const Hero = () =>(
 
                 </ContactDiv>
 
-            </CenterDiv>
+            </CenterDiv> */}
+
         </ContentDiv>
     </HeroDiv>
 )
