@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
+import { Link } from "gatsby"
 
 const HeaderDiv = styled.div`
     height: 70px;
@@ -23,6 +24,9 @@ const HeaderText = styled.h1`
     margin:0;
     padding:0;
   
+    &:hover {
+        color: red;
+    }
 
 `
 const RightDiv = styled(LeftDiv)`
@@ -32,7 +36,7 @@ const Header = () =>(
     <HeaderDiv>
         
         <MiddleDiv>
-            <HeaderText>Zach Hall</HeaderText>
+            <Link to="/"><HeaderText>Zach Hall</HeaderText></Link>
         </MiddleDiv>
      
     </HeaderDiv>
