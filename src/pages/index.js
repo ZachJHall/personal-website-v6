@@ -6,7 +6,7 @@ import './index.css'
 import Header from '../components/header'
 import Hero from '../components/hero'
 import Projects from '../components/projects'
-
+import BlogAttention from '../components/blogAttention'
 
 
 const ContainerDiv = styled.div`
@@ -18,6 +18,7 @@ export default function Home() {
     <ContainerDiv>
       <Header />
       <Hero />
+      <BlogAttention />
       <Projects />
     </ContainerDiv>
   )
