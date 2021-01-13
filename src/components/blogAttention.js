@@ -16,7 +16,7 @@ const Container = styled.div`
 `
 const BlogAttention = () =>(
    <Container>
-       <span>A little of what I have wrote:</span>
+       <span >A little of what I have wrote:</span>
        <span>Here</span>
    </Container>
 )
