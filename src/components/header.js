@@ -6,6 +6,10 @@ const HeaderDiv = styled.div`
     height: 70px;
     background-color: white;
     display: flex;
+
+    @media (max-width:332px) {
+        justify-content: space-around;
+    }
 ` 
 const LeftDiv = styled.div`
     width: 33%;
@@ -14,6 +18,10 @@ const LeftDiv = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+
+    @media (max-width:332px) {
+        display: none;
+    }
 `
 const MiddleDiv = styled.div`
     width: 34%;
@@ -21,6 +29,10 @@ const MiddleDiv = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+
+    @media (max-width:332px) {
+        width: auto;
+    }
 `
 
 const HeaderText = styled.h1`
@@ -34,6 +46,11 @@ const HeaderText = styled.h1`
 
 `
 const RightDiv = styled(LeftDiv)`
+    @media (max-width:332px) {
+        display: flex;
+        width: auto;
+
+    }
 `
 const Header = () =>(
     <HeaderDiv>
