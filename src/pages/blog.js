@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'styled-components'
 import './index.css'
 
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Header from '../components/header'
 
@@ -10,33 +10,39 @@ const Container = styled.div`
 
 `
 
-export default function Home() {
-
-  const query = useStaticQuery(graphql`
- query {
-  allMarkdownRemark {
-    edges {
-      node {
-        frontmatter {
-          title
-        }
-      }
-    }
-  }
-}
-`)
+export default function Blog({ data }) {
   return (
     <Container>
       <Header />
+      {/* <h3>{data.allMarkdownRemark.totalCount}</h3> */}
 
-      {query.allMarkdownRemark.edges.map(edge => {
-        return (
-          <h1>{edge.node.frontmatter.title}</h1>
-        )
-      })}
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <Link to = {node.fields.slug}><h2>{node.frontmatter.title}</h2></Link>
+      ))}
+
       
     </Container>
   )
 }
 
 
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
