@@ -12,11 +12,13 @@ const BodyContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 
 `
 const Body = styled.div`
    text-align: left;
-   width: 500px;
+   max-width: 500px;
+   width: 90%;
    line-height: 2rem;
 `
 export default function BlogPost({ data }) {
