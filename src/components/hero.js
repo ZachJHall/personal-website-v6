@@ -44,6 +44,7 @@ const CenterDiv = styled.div`
 `
 
 const CenterText = styled.h2`
+        text-align: center;
         color: white;
         align-self: center;
         margin:0;
