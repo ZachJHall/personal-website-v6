@@ -114,7 +114,7 @@ const BannerImage = () => {
 
     return (
       <HeroImageDiv>
-        <Img fluid = {data.file.childImageSharp.fluid} alt='barbell with weight at Powerbody USA'/>
+        <Img fluid = {data.file.childImageSharp.fluid} alt='Zach Hall - Software Dev'/>
       </HeroImageDiv>
     )
   }
