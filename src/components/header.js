@@ -8,7 +8,7 @@ const HeaderDiv = styled.div`
     display: flex;
 ` 
 const LeftDiv = styled.div`
-    width: 32%;
+    width: 33%;
     height:100%;
 
     display:flex;
@@ -16,7 +16,7 @@ const LeftDiv = styled.div`
     align-items:center;
 `
 const MiddleDiv = styled.div`
-    width: 100%;
+    width: 34%;
     height:100%;
     display:flex;
     justify-content:center;
@@ -34,7 +34,6 @@ const HeaderText = styled.h1`
 
 `
 const RightDiv = styled(LeftDiv)`
-    width: 33%;
 `
 const Header = () =>(
     <HeaderDiv>
