@@ -1,15 +1,33 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from 'styled-components'
 
 import Header from '../components/header'
 
+const Title = styled.h1`
+    text-align: center;
+`
+
+const BodyContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+`
+const Body = styled.div`
+   text-align: left;
+   width: 500px;
+   line-height: 2rem;
+`
 export default function BlogPost({ data }) {
     const post = data.markdownRemark
   return (
     <div>
         <Header />
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Title>{post.frontmatter.title}</Title>
+        <BodyContainer>
+            <Body dangerouslySetInnerHTML={{ __html: post.html }} />
+        </BodyContainer>
     </div>
   )
 }
